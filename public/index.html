@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address Distance Calculator</title>
+</head>
+<body>
+    <h1>Address Distance Calculator</h1>
+    
+    <form id="distanceCalculatorForm">
+        <label for="target-address">Target Address:</label>
+        <input type="text" id="target-address" name="target-address" placeholder="Enter Target Address" required>
+        
+        <div id="addressFields">
+            <div class="addressField">
+                <label for="address2">Compare Address:</label>
+                <input type="text" class="addressInput" name="address2" placeholder="Enter Compare Address" required>
+                <button type="button" onclick="removeAddressField(this)">Remove</button>
+            </div>
+        </div>
+
+        <button type="button" onclick="addAddressField()">Add Address</button>
+        <button type="button" onclick="sendMessageToServer()">Submit</button>
+    </form>
+
+    <div id="result">
+        <h2>Results</h2>
+        <div id="distanceResults"></div>
+        <p id="closestFarthest"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
